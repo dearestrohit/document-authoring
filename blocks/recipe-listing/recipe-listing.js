@@ -213,6 +213,7 @@ export default async function decorate(block) {
 
   // Fetch and display items
   const items = await fetchItems(config.index || '/query-index.json', filters);
+  const isUsingSampleData = items.length > 0 && items[0].path && items[0].path.startsWith('/recipes/');
 
   block.innerHTML = '';
 
@@ -225,8 +226,8 @@ export default async function decorate(block) {
     return;
   }
 
-  // Add info message if using sample data
-  if (!config.index || config.index === '/query-index.json') {
+  // Add info message ONLY if actually using sample data
+  if (isUsingSampleData) {
     const infoMsg = document.createElement('div');
     infoMsg.className = 'recipe-listing-info';
     infoMsg.innerHTML = '<p><strong>Demo Mode:</strong> Showing sample data. Set up your query index to see your actual content.</p>';
