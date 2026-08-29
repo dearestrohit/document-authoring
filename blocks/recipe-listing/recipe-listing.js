@@ -203,8 +203,9 @@ export default async function decorate(block) {
   block.appendChild(loadingMsg);
 
   // Prepare filters
+  // Default to /recipe-listing path if not specified
   const filters = {
-    path: config.path || '',
+    path: config.path || '/recipe-listing',
     category: config.category || '',
     tag: config.tag || '',
     limit: parseInt(config.limit || '0', 10) || undefined,
