@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://sunfeastyippee.com/",
+  "path": "index",
+  "timestamp": "2026-09-03T17:15:26.307Z",
+  "title": "Yippee Noodles & Pasta | Tasty Treats for Every Mood",
+  "template": "homepage",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "hero-story",
+    "cards-recipe",
+    "cards-recipe",
+    "cards-recipe",
+    "cards-recipe",
+    "cards-recipe",
+    "cards-recipe",
+    "cards-social"
+  ]
+}
