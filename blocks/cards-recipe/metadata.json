@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-recipe",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-09-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sunfeastyippee.com/recipe-listing.html",
+    "originPage": "recipe listing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "compact",
+    "purpose": "recipe-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + linked title per card",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "DIY recipe card grids/carousels",
+      "product or recipe teaser cards with image and title",
+      "media-forward card sets on colored backgrounds"
+    ],
+    "notSuitableFor": [
+      "text-only card lists",
+      "cards requiring long descriptions or multiple CTAs"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/recipe-listing"],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-03T00:00:00.000Z"
+  }
+}

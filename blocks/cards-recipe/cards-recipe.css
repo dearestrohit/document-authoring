@@ -1,0 +1,116 @@
+/* cards-recipe — "Make With Magic Masala!" DIY recipe card set.
+   Source: orange (#ff7f00) full-width band, portrait recipe images with a
+   circular play-button overlay, centered white Amaranth titles. */
+
+.cards-recipe {
+  /* full-bleed orange band */
+  background-color: var(--brand-orange);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 40px clamp(16px, 6vw, 90px) 50px;
+}
+
+.cards-recipe > ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 600px) {
+  .cards-recipe > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-recipe > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}
+
+.cards-recipe > ul > li {
+  position: relative;
+  border: none;
+  background: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cards-recipe > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 25%);
+}
+
+.cards-recipe .cards-recipe-card-image {
+  position: relative;
+  line-height: 0;
+  border-radius: 12px;
+
+  /* fallback tint so a slow/broken source asset doesn't flash a white void
+     against the orange band */
+  background-color: rgb(255 255 255 / 25%);
+}
+
+.cards-recipe .cards-recipe-card-image picture,
+.cards-recipe .cards-recipe-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 270 / 360;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* circular play-button overlay (source shows video-play affordance) */
+.cards-recipe .cards-recipe-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 92%);
+
+  /* red play triangle, centered inside the circle */
+  background-image:
+    linear-gradient(transparent, transparent),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23b50404" d="M8 5v14l11-7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% 60%, 26px 26px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
+  transition: transform 0.25s ease;
+  pointer-events: none;
+}
+
+.cards-recipe > ul > li:hover .cards-recipe-card-image::after {
+  transform: scale(1.1);
+}
+
+.cards-recipe .cards-recipe-card-body {
+  margin: 0;
+  padding: 14px 10px 4px;
+  text-align: center;
+}
+
+.cards-recipe .cards-recipe-card-body h2,
+.cards-recipe .cards-recipe-card-body h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+/* whole card clickable if a title link is present */
+.cards-recipe .cards-recipe-card-body a:any-link {
+  color: #fff;
+  text-decoration: none;
+}

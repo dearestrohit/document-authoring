@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "document-authoring": {
+      "previewOrg": "dearestrohit",
+      "previewSite": "document-authoring",
+      "contentHostUrl": "https://content.da.live/dearestrohit/document-authoring/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

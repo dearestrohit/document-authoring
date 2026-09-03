@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "recipe-listing",
+      "urls": [
+        "https://sunfeastyippee.com/recipe-listing.html"
+      ],
+      "representativeUrl": "https://sunfeastyippee.com/recipe-listing.html",
+      "description": "Recipe listing page: intro heading, dynamic recipe card grid with filters and pagination, an orange promo band, a DIY recipe card set, and an auto-populated footer.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "recipe-listing",
+          "instances": [
+            ".cmp-product-explore-listing"
+          ]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            ".cmp-product-explore-listing__extra-between-section.teaser"
+          ]
+        },
+        {
+          "name": "cards-recipe",
+          "instances": [
+            ".cmp-cards--yippee-diy"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Recipe listing main",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.color-background-background-1.aem-GridColumn.aem-GridColumn--default--12",
+          "style": null,
+          "blocks": [
+            "recipe-listing",
+            "hero-promo",
+            "cards-recipe"
+          ],
+          "defaultContent": [
+            ".cmp-product-explore-listing__header-title",
+            ".cmp-product-explore-listing__header-subTitle",
+            ".cmp-cards__heading",
+            ".cmp-cards__sub-heading"
+          ]
+        }
+      ]
+    }
+  ]
+}

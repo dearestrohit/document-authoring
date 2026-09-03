@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-09-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sunfeastyippee.com/recipe-listing.html",
+    "originPage": "recipe listing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "promo-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + 1 CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-width promotional banners",
+      "social/community call-to-action bands",
+      "mid-page marketing callouts with a background graphic"
+    ],
+    "notSuitableFor": [
+      "plain text intros without a background",
+      "hero areas requiring multiple CTAs or complex layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/recipe-listing"],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-03T00:00:00.000Z"
+  }
+}

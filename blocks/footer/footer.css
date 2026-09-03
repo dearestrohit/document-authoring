@@ -1,20 +1,166 @@
+/* Sunfeast YiPPee! footer — orange top band + dark-red copyright strip.
+   Mobile-first: base rules stack; min-width media queries enhance. */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--brand-orange);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
+footer .footer-content {
   margin: 0;
 }
 
+/* --- Top band (orange): logo + link columns --- */
+footer .footer-top {
+  background-color: var(--brand-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 32px;
+}
+
+footer .footer-brand {
+  text-align: center;
+}
+
+footer .footer-brand img {
+  width: auto;
+  max-width: 280px;
+  height: auto;
+}
+
+footer .footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .footer-links a:any-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  color: #000;
+}
+
+/* --- Bottom strip (dark red): ITC portal + copyright + social --- */
+footer .footer-bottom {
+  background-color: var(--brand-red);
+}
+
+footer .footer-legal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+footer .footer-legal p {
+  margin: 0;
+}
+
+footer .footer-legal a:any-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer .footer-itc a:hover,
+footer .footer-copyright a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+footer .footer-social {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+footer .footer-social a:any-link {
+  display: inline-flex;
+  color: #fff;
+}
+
+footer .footer-social a img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+footer .footer-social a:hover {
+  opacity: 0.8;
+}
+
+/* --- Desktop --- */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-top {
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 61px;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 64px 96px;
+  }
+
+  footer .footer-brand {
+    flex: 0 0 auto;
+    margin-right: auto;
+  }
+
+  footer .footer-links {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  /* vertical divider between columns */
+  footer .footer-links + .footer-links::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    background: rgb(0 0 0 / 25%);
+  }
+
+  footer .footer-links ul {
+    text-align: left;
+    gap: 16px;
+  }
+
+  footer .footer-legal {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    padding: 18px 32px;
+  }
+
+  footer .footer-social {
+    margin-left: auto;
+  }
+
+  footer .footer-copyright {
+    margin: 0;
   }
 }

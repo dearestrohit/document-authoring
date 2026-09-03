@@ -1,0 +1,102 @@
+/* hero-promo — "#Sunfeastyippee / Join Us" orange promotional band.
+   Source: full-width orange band with a decorative cloud background graphic,
+   centered heading + supporting text + a red "Join Us" pill CTA. */
+
+.hero-promo-container .hero-promo-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-promo {
+  position: relative;
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: 48px 24px 56px;
+  min-height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--brand-orange);
+  background-image: url('https://s7ap1.scene7.com/is/content/itcportalprod/recipelisting-joinus-desktop-BG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-promo h1,
+.hero-promo h2,
+.hero-promo h3,
+.hero-promo h4,
+.hero-promo h5,
+.hero-promo h6 {
+  max-width: 900px;
+  margin: 0 auto 12px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 34px);
+  text-shadow: 0 1px 4px rgb(0 0 0 / 18%);
+}
+
+.hero-promo p {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+/* keep text white even when the block gets the .no-image class (our band has
+   no authored <picture>; the background graphic is supplied via CSS). */
+.hero-promo.no-image h1,
+.hero-promo.no-image h2,
+.hero-promo.no-image h3,
+.hero-promo.no-image h4,
+.hero-promo.no-image h5,
+.hero-promo.no-image h6,
+.hero-promo.no-image p {
+  color: #fff;
+}
+
+/* Join Us CTA — red pill button */
+.hero-promo p a:any-link,
+.hero-promo a.button:any-link {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--brand-red);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-promo p a:any-link:hover,
+.hero-promo a.button:any-link:hover {
+  background-color: var(--brand-red-dark);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* if an author adds a picture, let it sit behind the content full-bleed. */
+.hero-promo picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.hero-promo picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  .hero-promo {
+    padding: 56px 32px 64px;
+  }
+}

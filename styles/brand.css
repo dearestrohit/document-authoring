@@ -1,0 +1,25 @@
+/* Sunfeast YiPPee! brand tokens — extracted from sunfeastyippee.com */
+:root {
+  /* Fonts */
+  --heading-font-family: "Amaranth", sans-serif;
+  --body-font-family: "Lato", sans-serif;
+
+  /* Brand colors */
+  --brand-orange: #ff7f00;
+  --brand-red: #b50404;
+  --brand-red-dark: #8a0303;
+
+  /* Base */
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #b50404;
+  --link-hover-color: #8a0303;
+
+  /* Heading sizes (desktop) */
+  --heading-size-xxl: 40px;
+  --heading-size-xl: 32px;
+  --heading-size-l: 28px;
+  --heading-size-m: 24px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 18px;
+}
