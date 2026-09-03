@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://sunfeastyippee.com/recipe-listing.html",
+  "path": "recipe-listing",
+  "timestamp": "2026-09-03T15:57:13.184Z",
+  "title": "Yippee Noodles Recipes – Quick & Easy Ideas | Sunfeast",
+  "template": "recipe-listing",
+  "blocks": [
+    "recipe-listing",
+    "hero-promo",
+    "cards-recipe"
+  ]
+}
