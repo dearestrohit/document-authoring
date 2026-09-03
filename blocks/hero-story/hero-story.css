@@ -1,0 +1,70 @@
+/* Block: hero-story -- values extracted from sunfeastyippee.com (.cmp-container--multiTitle) */
+
+/* Full-width band: EDS wraps the section in a max-width container; override it */
+.hero-story-container .hero-story-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-story {
+  position: relative;
+  box-sizing: border-box;
+
+  /* The noodle band artwork (orange fill + red shape + wave border) is a single
+     Scene7 image; brand orange is the fallback if the remote image fails to load */
+  background-color: var(--brand-orange);
+  background-image: url("https://s7ap1.scene7.com/is/content/itcportalprod/Home-desktop-Noodles%20BG");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 40px 24px 56px;
+  text-align: left;
+}
+
+.hero-story > div > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-story h1,
+.hero-story h2,
+.hero-story h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.31;
+  color: var(--text-color);
+}
+
+/* Multi-color trailing letters (approximates the source palette) */
+.hero-story h2 .letter-1 { color: #000; }
+.hero-story h2 .letter-2 { color: var(--brand-red); }
+.hero-story h2 .letter-3 { color: #fc4; }
+.hero-story h2 .letter-4 { color: #fcedee; }
+
+.hero-story p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-color);
+}
+
+.hero-story p + p {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  .hero-story {
+    padding: 84px 113px 114px;
+  }
+
+  .hero-story h1,
+  .hero-story h2,
+  .hero-story h3 {
+    font-size: 32px;
+    line-height: 1.31;
+  }
+}

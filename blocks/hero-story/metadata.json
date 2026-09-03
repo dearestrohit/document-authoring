@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-story",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-09-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sunfeastyippee.com/",
+    "originPage": "homepage",
+    "blockPosition": "upper-middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "brand-story-band",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "oversized multi-color title + supporting paragraph over a background photo",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand-story bands with a large decorative headline over a background image",
+      "editorial hero bands that pair an oversized title with a paragraph",
+      "no-CTA promotional storytelling sections"
+    ],
+    "notSuitableFor": [
+      "banners requiring a CTA button (use hero-promo or hero-banner)",
+      "repeating card/tile content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-03T00:00:00.000Z"
+  }
+}

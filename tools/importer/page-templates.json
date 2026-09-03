@@ -10,7 +10,6 @@
       ],
       "representativeUrl": "https://sunfeastyippee.com/recipe-listing.html",
       "description": "Recipe listing page: intro heading, dynamic recipe card grid with filters and pagination, an orange promo band, a DIY recipe card set, and an auto-populated footer.",
-      "urlPattern": "/*",
       "blocks": [
         {
           "name": "recipe-listing",
@@ -49,7 +48,78 @@
             ".cmp-cards__sub-heading"
           ]
         }
-      ]
+      ],
+      "urlPattern": "/recipe-listing.html"
+    },
+    {
+      "name": "homepage",
+      "urls": [
+        "https://sunfeastyippee.com/"
+      ],
+      "representativeUrl": "https://sunfeastyippee.com/",
+      "description": "Site homepage: hero banner slider, intro heading + brand text over noodle background, product tabs, recipe carousel, DIY cards, and a #YiPPeelicious social grid with Join Us CTA.",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#container-1859b8bd7b > .banneryippee",
+            ".banneryippee:first-of-type"
+          ]
+        },
+        {
+          "name": "hero-story",
+          "instances": [
+            ".cmp-container--multiTitle"
+          ]
+        },
+        {
+          "name": "cards-recipe",
+          "instances": [
+            ".tabs",
+            ".contenttile",
+            ".diycard"
+          ]
+        },
+        {
+          "name": "recipe-listing",
+          "instances": [
+            ".recipetabwithcards"
+          ]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            "#container-ac6f1289e4 .banneryippee"
+          ]
+        },
+        {
+          "name": "cards-social",
+          "instances": [
+            ".socialmediacomp"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Homepage main",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.color-background-background-1.aem-GridColumn.aem-GridColumn--default--12",
+          "style": null,
+          "blocks": [
+            "hero-banner",
+            "hero-story",
+            "cards-recipe",
+            "recipe-listing",
+            "hero-promo",
+            "cards-social"
+          ],
+          "defaultContent": [
+            ".cmp-yippee-banner__seo-h1 h2",
+            ".text .cmp-text h1"
+          ]
+        }
+      ],
+      "urlPattern": "/"
     }
   ]
 }

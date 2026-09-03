@@ -1,0 +1,88 @@
+/*
+ * Block: cards-social (#YiPPeelicious Instagram grid)
+ * Values extracted from sunfeastyippee.com .cmp-social computed styles
+ */
+
+/* Masonry grid: CSS columns preserve the source's portrait images at their
+   natural aspect ratios, staggering short/tall tiles like the source. */
+.cards-social > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 2;
+  column-gap: 18px;
+}
+
+/* Masonry stagger: source alternates tile heights per column
+   (pattern within each group of 4: short, tall, tall, short). */
+.cards-social > ul > li {
+  margin: 0 0 18px;
+  break-inside: avoid;
+  line-height: 0;
+  aspect-ratio: 273 / 265;
+}
+
+.cards-social > ul > li:nth-child(4n + 2),
+.cards-social > ul > li:nth-child(4n + 3) {
+  aspect-ratio: 273 / 380;
+}
+
+.cards-social .cards-social-card-image,
+.cards-social .cards-social-card-link,
+.cards-social .cards-social-card-link picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cards-social .cards-social-card-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cards-social .cards-social-card-link:hover img,
+.cards-social .cards-social-card-link:focus-visible img {
+  transform: scale(1.06);
+}
+
+/* "Join us" CTA — sibling default-content link after the block.
+   Styled as the source's red pill button. */
+.cards-social-wrapper + .default-content-wrapper {
+  text-align: center;
+}
+
+.cards-social-wrapper + .default-content-wrapper p {
+  margin: 8px 0 0;
+}
+
+main .cards-social-wrapper + .default-content-wrapper a:any-link {
+  display: inline-block;
+  background-color: var(--brand-red);
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+main .cards-social-wrapper + .default-content-wrapper a:hover,
+main .cards-social-wrapper + .default-content-wrapper a:focus-visible {
+  background-color: var(--brand-red-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .cards-social > ul {
+    column-count: 4;
+  }
+}

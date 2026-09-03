@@ -1,0 +1,145 @@
+/* Block: hero-banner -- values from sunfeastyippee.com computed styles */
+
+/* Full-width: escape the section max-width wrapper */
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+  padding: 32px 24px 48px;
+  min-height: 360px;
+
+  /* Brand orange band at top fading into white, matching source hero section */
+  background: linear-gradient(
+    180deg,
+    var(--brand-orange) 0%,
+    var(--brand-orange) 26%,
+    #fff 26%,
+    #fff 100%
+  );
+}
+
+/* Media: circular banner image (source: 360x360, border-radius 50%) */
+.hero-banner-media {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner-media picture {
+  display: block;
+  width: 280px;
+  height: 280px;
+}
+
+.hero-banner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Content column */
+.hero-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+/* Primary slide (first) -- prominent hero text */
+.hero-banner-slide.primary h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: var(--brand-red);
+}
+
+.hero-banner-slide.primary p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+}
+
+/* Secondary slides -- de-emphasized "other slides" grouped below */
+.hero-banner-more {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.hero-banner-slide.secondary h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--brand-red);
+  opacity: 0.85;
+}
+
+.hero-banner-slide.secondary p {
+  margin: 6px 0 0;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-color);
+}
+
+/* No-image fallback */
+.hero-banner.no-image {
+  flex-direction: column;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    padding: 48px 32px 64px;
+    min-height: 480px;
+    background: linear-gradient(
+      180deg,
+      var(--brand-orange) 0%,
+      var(--brand-orange) 32%,
+      #fff 32%,
+      #fff 100%
+    );
+  }
+
+  .hero-banner-media picture {
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero-banner-content {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .hero-banner-more {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+  }
+}

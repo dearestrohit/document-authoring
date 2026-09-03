@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-09-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://sunfeastyippee.com/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "banner-slider",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "rotating slides: image/video-thumb + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "top-of-page rotating banner carousels",
+      "hero sliders with multiple promotional slides",
+      "full-width banner bands with a heading, supporting text and a CTA"
+    ],
+    "notSuitableFor": [
+      "single static hero areas (use hero-promo)",
+      "plain text intros without a background"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-03T00:00:00.000Z"
+  }
+}
